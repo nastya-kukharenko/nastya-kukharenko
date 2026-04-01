@@ -1,0 +1,369 @@
+.header {
+  width: 100%;
+  color: #3f46d6;
+}
+
+.header__logo {
+  margin-left: -2px;   /* 🔥 відступ від лівого краю */
+  transform: translateY(-10px); /* 🔥 трохи підняти */
+}
+
+.header__logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+.header__top {
+  background: var(--bg-second-color);
+  color: #fff;
+
+  padding: 60px 0;
+  position: relative;
+  z-index: 2;
+}
+
+
+.header__hero {
+  background: var(--bg-third-color);
+
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start;
+
+  padding: 0 0 30px 0; 
+}
+
+
+
+
+
+.hero__sidebar {
+  background: var(--bg-second-color);
+  color: #fff;
+
+  width:350px;
+  min-height: 300px;
+
+  padding: 40px 25px;
+
+  margin-left: 0;
+
+  
+  margin-top: -26;
+}
+
+
+.hero__content {
+  flex: 1;
+  padding: 40px;
+}
+
+
+@media (max-width: 1024px) {
+  .hero__sidebar {
+    width: 260px;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__hero-inner {
+    flex-direction: column;
+  }
+
+  
+    .hero__sidebar {
+  width: 220px;          /* 🔥 ключове */
+  max-width: 50%;       /* щоб не ламалось на малих екранах */
+
+  }
+
+  .hero__content {
+    padding: 20px;
+  }
+}
+
+
+.menu-item {
+  background-color: #e6d3b3;
+  color: #3f46d6;
+  font-family: 'Archivo Black', sans-serif;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+   width: 100%;           /* 🔥 обов’язково */
+  box-sizing: border-box;
+
+}
+
+.menu-item:hover {
+ 
+  box-shadow: 0 6px 0 rgba(0,0,0,0.25);
+}
+
+
+.menu-item img {
+  width:30px;
+  height:30px;
+  object-fit: contain;
+}
+
+.top-menu-item {
+     font-family: 'Archivo Black', sans-serif;
+     color: #e6d3b3;
+      display: flex;
+  align-items: center;
+  gap: 8px;
+   text-decoration: none;   /* ❌ прибирає лінію */
+  border-bottom: none;     /* ❌ якщо раптом є */
+  color: #f3e5c8;
+  font-weight: 700;
+  font-size: 25px;
+  display: flex;
+     
+}
+.top-menu-item img {
+  height: 1em;   /* = висота як у тексту */
+  width: auto;   /* щоб не спотворювалось */
+}
+.inside {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 🔥 ключове */
+  gap: 115px; 
+}
+.header__top {
+  display: flex;
+  gap:170px;
+}
+.header {
+  background: #3f46d6 ;
+  padding: 20px 0;
+}
+.lang-switch {
+  display: flex;
+  background: #f5e6d3;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.25);
+}
+
+/* BUTTONS */
+.lang {
+  padding: 10px 18px;
+  border: none;
+  font-size: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Archivo Black', sans-serif;
+
+  background: transparent; /* важливо */
+  color: #3f46d6 !important; /* ← фікс */
+}
+
+/* EN (темніший) */
+.lang.en {
+  color: #0b3fae !important;
+}
+
+/* UA (світліший) */
+.lang.ua {
+  color: #85a2ec !important;
+}
+
+/* ACTIVE */
+.lang.active.en {
+  background: #0b3fae;
+  color: white !important;
+}
+
+.lang.active.ua {
+  background: #7596e8;
+  color: white !important;
+}
+
+/* HOVER */
+.lang:hover {
+  opacity: 0.85;
+}
+/* SEARCH CONTAINER */
+.search-box {
+  position: relative;
+  width:800px;
+ margin-top: 0px;
+}
+
+/* INPUT */
+.search-box input {
+  width: 100%;
+  padding: 18px 60px 18px 24px; /* більше висота */
+  font-size:25px;
+  font-weight: 700;
+  font-family:'Archivo Black', sans-serif ;
+  background: #c8c9f5; /* темніший бежевий */
+  border: 4px solid #3f46d6; /* товстіша обводка */
+  border-radius: 12px; /* менше заокруглення */
+  outline: none;
+}
+
+/* PLACEHOLDER */
+.search-box input::placeholder {
+  color: #5a6cff;
+  opacity: 0.8;
+}
+
+/* ICON */
+.search-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 26px; /* більша іконка */
+  height: 26px;
+  object-fit: contain;
+}
+.main-text {
+  font-family: 'ADLaM Display', cursive;
+  text-align: right;
+  color: #2f5bd3;
+  margin-top: 50px;
+}
+
+.text-top {
+  font-size: 36px;
+  max-width: 500px;
+  margin: 0 auto 10px;
+  line-height: 1.4;
+   text-align: right;
+}
+
+.text-bottom {
+  font-size: 36px;
+  margin-right: -10px;
+}
+
+.text-bottom span {
+  color: #e74c3c; /* червоне слово random */
+}
+.main-text {
+  text-align: right;
+  max-width: 420px;   /* фіксована ширина */
+  margin-left: auto;  /* притискає вправо */
+}
+
+.text-top,
+.text-bottom {
+  width: 100%;        /* обидва займають всю ширину */
+}
+
+.half-circle-wrapper {
+  width:700px;
+  height: 350px; /* половина висоти */
+  overflow: hidden;
+  margin-bottom: -71px;
+  margin-left: -250px;
+}
+
+.circle-img {
+  width: 100%;
+  height: auto;
+}
+.hero__sidebar{
+  margin-top: -500px;
+}
+@media (max-width: 768px) {
+
+  /* 🔹 Загальний контейнер */
+  .inside {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  /* 🔹 Верхнє меню */
+  .header__top {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .top-menu-item {
+    font-size: 18px;
+  }
+
+  /* 🔹 Лого */
+  .header__logo img {
+    height: 35px;
+  }
+
+  /* 🔹 HERO */
+  .header__hero-inner {
+    flex-direction: column;
+  }
+
+  /* 🔹 Сайдбар */
+  .hero__sidebar {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  /* 🔹 Контент */
+  .hero__content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* 🔍 SEARCH */
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    font-size: 18px;
+    padding: 14px 50px 14px 16px;
+  }
+
+  .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* 🔤 ТЕКСТ */
+  .main-text {
+    max-width: 100%;
+    margin-top: 30px;
+    text-align: left; /* 📱 краще читається */
+  }
+
+  .text-top,
+  .text-bottom {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  /* 🎡 ПІВКОЛО */
+  .half-circle-wrapper {
+    width: 100%;
+    height: 150px;
+    margin: 30px 0 0 0;
+  }
+
+  .circle-img {
+    width: 100%;
+  }
+
+  /* 🔘 КНОПКИ МОВ */
+  .lang {
+    font-size: 18px;
+    padding: 8px 14px;
+  }
+
+}

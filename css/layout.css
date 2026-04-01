@@ -1,0 +1,53 @@
+:root{
+    --txt-color-01: #3f48cc;           /* Колір основного тексту */
+    --txt-color-02: #f5e6d3;           /* Колір тексту інверсія */
+    --header-color: #333;           /* Колір заголовків */
+    --link-color: #f5e6d3;             /* Колір покликань */
+    --link-hover: #F1DDC8;             /* Колір при наведенні */
+    --bg-primary-color: #E63B25;       /* Колір основного фону */
+    --bg-second-color: #3f48cc;        /* Колір фону №2 */
+    --bg-third-color:#f5e6d3;        /* Колір фону №2 */
+    --mob-padding: 20px;              /* Відступи до контенту на смартфони */
+    --ipad-padding: 50px;              /* Відступи до контенту на планшеті */
+    --max-width: 1380px;              /* Обмеження ширини блоків */
+}
+html, body{
+  font-family: 'ADLaM Display', sans-serif ;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 28px;                   /* Розмір основного тексту */
+  line-height: 1.4;                  /* Міжрядковий інтервал */
+  font-style: normal;
+  color: var(--txt-color-01);
+}
+
+em , i, .italic {
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1{ font-size: 2rem ;}
+h2 {font-size: 1.5rem;}
+h3{font-size: 1.35rem;}
+
+header > .inside,
+footer > .inside,
+section >.inside {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--ipad-padding);
+  padding-right: var(--ipad-padding);
+}
+@media  (max-width: 640px) {
+header > .inside,
+footer > .inside,
+section > .inside {
+    padding-left: var(--mob-padding);
+    padding-right: var(--mob-padding);
+} 
+}
